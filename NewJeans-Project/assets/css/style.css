@@ -1,0 +1,660 @@
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* COMMON */
+.clear {
+  clear: both;
+}
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-third {
+  width: 33.333333%;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.text-gradient-1 {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.font-weight-700 {
+  font-weight: 700 !important;
+}
+.font-weight-900 {
+  font-weight: 900 !important;
+}
+.light-pink-background1 {
+  width: 100%;
+  background-image: linear-gradient(to right bottom, #f0a7d3, #f7d0e8, #ffffff);
+}
+.light-pink-background2 {
+  width: 100%;
+  height: 1800px;
+  background-image: linear-gradient(
+    to bottom,
+    #ffadde,
+    #fabadf,
+    #facfe8,
+    #fde6f4,
+    #fff2f9
+  );
+}
+
+.atlas-background {
+  background-image: linear-gradient(to right, #feac5e, #c779d0, #0082c8);
+}
+
+/* Main */
+#main {
+  overflow: hidden;
+  width: 100%;
+}
+#nav {
+  display: inline-block;
+}
+#nav,
+.subnav {
+  list-style-type: none;
+}
+#header {
+  height: 48px;
+  background-color: #ff4f92f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#nav > li {
+  display: inline-block;
+}
+#nav li {
+  position: relative;
+}
+#nav li a {
+  display: block;
+  line-height: 48px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0 30px;
+  font-size: 16px;
+}
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+  color: white;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+#nav > li > a {
+  text-transform: uppercase;
+}
+#nav .subnav {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+
+  background-color: #ff4f92f1;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a {
+  padding: 0 32px;
+  line-height: 48px;
+}
+#nav .icon-arrow {
+  font-weight: 900;
+  font-size: 17px;
+}
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+#header .mobile-menu-btn,
+#header .search-button {
+  float: right;
+  padding: 0 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#header .mobile-menu-btn:hover,
+#header .search-button:hover {
+  background-color: #ff0062;
+  cursor: pointer;
+}
+#header .icon-menu,
+#header .icon-search {
+  color: #000;
+  font-size: 20px;
+  line-height: 48px;
+  font-weight: 900;
+}
+
+/* main-picture */
+#main-picture {
+  position: relative;
+  margin-top: 48px;
+  padding-top: 50%;
+  background: url("/NewJeans-Project/assets/img/main-picture/main-picture.jpg")
+    center / cover no-repeat;
+}
+#main-picture .text-content {
+  position: absolute;
+  bottom: 46%;
+  left: 50%;
+  transform: translateX(-46%);
+  text-align: center;
+  background: linear-gradient(to top, #ee9ca7, #ffdde1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+}
+#main-picture .text-heading {
+  font-size: 135px;
+  font-weight: 900;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 3px;
+}
+#main-picture .rabbit-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.rabbit-iconimg {
+  width: 130px;
+  height: 130px;
+}
+
+/* 1 số common classes cho content parts */
+#content .content-section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 0 112px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#content .section-heading {
+  margin-bottom: 30px;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+#content .section-sub-heading {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.8);
+}
+#content .introduction {
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Members */
+
+#content .member-list {
+  margin-top: 37px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+#content .member-list .member-name {
+  text-align: center;
+  margin-top: 18.8px;
+  margin-bottom: 18.8px;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 1px;
+}
+#content .member-list .member {
+  float: left;
+  width: 370px;
+  margin: 38px;
+  text-align: center;
+  box-shadow: 0 0 15px 5px rgb(248, 99, 137);
+}
+#content .member-list .member:hover {
+  background-color: #ff0062;
+}
+
+.image-member {
+  width: 350px;
+  height: 420px;
+  border: 8px solid #ff0062;
+  border-radius: 70px;
+  margin-bottom: 22.8px;
+  width: 88%;
+}
+
+/* Tour dates */
+.tour {
+  background-color: #ff4f92f1;
+}
+.ticket-list {
+  background: linear-gradient(to right, #fdbbe4, #fc2992);
+  margin-top: 56px;
+  list-style-type: none;
+  width: 870px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #000;
+}
+.ticket-list li {
+  font-size: 21px;
+  padding: 12px 20px;
+}
+.ticket-list .month {
+  border-bottom: 2px solid #000;
+}
+
+.ticket-list .ticket-condition {
+  margin-left: 20px;
+  color: #fff;
+  background-color: #ff0062;
+  padding: 2.8px 4px;
+}
+
+.ticket-list .ticket-quantity {
+  float: right;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+/* .Places */
+.place-list {
+  margin-top: 50px;
+  width: 880px;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+.place-item {
+  width: 33.33333333%;
+  box-sizing: border-box;
+}
+/* Để màu background */
+.place-image {
+  display: block;
+  width: 100%;
+  height: 280px;
+}
+.place-content {
+  background: linear-gradient(to right, #fad2ea, #fa85bf, #ff399c);
+  padding: 13px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.place-heading {
+  margin-bottom: 12px;
+  font-size: 21px;
+  font-weight: 700;
+}
+.place-time {
+  font-size: 15px;
+  opacity: 0.9;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.place-description {
+  font-size: 15px;
+  line-height: 1.3;
+}
+.place-buyT-btn {
+  outline: 0;
+  border: 0;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: #000;
+  background: #fff;
+  line-height: 22px;
+  border-radius: 40px;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: rgb(255, 212, 58) -2px -2px 0px 2px,
+    rgb(247, 73, 169) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+  transition: all 0.2s;
+}
+.place-buyT-btn:hover {
+  box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px,
+    rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+/* Contact form */
+.contact-background {
+  padding: 80px 0px;
+}
+
+.contact-content {
+  margin-top: 70px;
+}
+
+.contact-info {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+  width: 23px;
+  display: inline-block;
+  font-weight: 900;
+}
+
+.contact-form .form-control {
+  padding: 6px 12px;
+  background: rgb(31, 32, 35);
+  border: 2.3px solid rgb(60, 63, 68);
+  border-radius: 4px;
+  font-size: 13px;
+  color: rgb(255, 254, 254);
+  height: 46px;
+  appearance: none;
+  transition: border 0.2 5s ease 0s;
+  width: 100%;
+}
+.contact-form .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgb(68, 218, 255);
+}
+.contact-form .form-control:focus::placeholder {
+  color: rgb(47, 231, 255);
+}
+.contact-form .form-control::placeholder {
+  color: rgb(197, 197, 197);
+}
+.contact-form .form-submit-btn {
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff90e8;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 10px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
+  float: right;
+}
+.contact-form .form-submit-btn:hover {
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px, -4px);
+}
+.contact-form .form-submit-btn:focus-visible {
+  outline-offset: 2px;
+}
+
+/* Concert-picture  */
+.concert-picture {
+  margin-bottom: -3px;
+}
+.concert-picture img {
+  width: 100%;
+}
+
+/* Footer section */
+#footer {
+  width: 100%;
+  padding: 160px 16px;
+  text-align: center;
+}
+#footer .socials-list {
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+#footer .socials-list a {
+  text-decoration: none;
+  color: #000000;
+}
+#footer .socials-list a:hover {
+  color: #424242;
+}
+#footer p {
+  font-size: 28px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1.7px;
+  word-spacing: 5px;
+  font-weight: 100;
+}
+
+/* Modal & Overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal.open {
+  display: flex;
+}
+.modal-container {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 950px;
+  min-height: 520px;
+  max-width: calc(100% - 36px);
+  /* Khoảng cách ở giữa dấu - và các toán hạng (số và đơn vị đo lường) trong hàm calc là cú pháp bắt buộc trong CSS. Dấu - trong calc được sử dụng để thực hiện phép trừ và phải có khoảng cách trước và sau nó để trình duyệt hiểu đúng cú pháp.
+*/
+  position: relative;
+  animation: modalFadeIn ease 1s;
+}
+.modal-header {
+  background-image: linear-gradient(
+    to right bottom,
+    #fe0963,
+    #ff2679,
+    #ff3688,
+    #ff4496,
+    #ff50a4,
+    #ff62b0,
+    #ff71bb,
+    #ff80c6,
+    #ff96d1,
+    #ffbbe3,
+    #ffd8ef,
+    #fde4f3
+  );
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 700;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-close i.ti-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px;
+  opacity: 0.8;
+}
+
+.modal-close:hover i.ti-close {
+  opacity: 1;
+}
+/* có 1 kĩ thuật để làm close button này ( hoặc nhiều thứ khác ) , là đầu tiên cho nó mờ (opacity:0.8) sau đó hover cho nó về lại opacity:1 , 1 kĩ thuật hover hay*/
+
+.modal-container header i.ti-github {
+  margin-right: 6px;
+}
+.modal-body {
+  padding: 16px;
+}
+.modal-label {
+  display: block;
+  font-size: 21px;
+  margin-bottom: 13px;
+  font-weight: 700;
+}
+.modal-label h4 {
+  display: inline;
+  font-weight: 400;
+}
+.modal-label:hover {
+  text-shadow: 1px 1px 2px #ff6bc6;
+  font-weight: 500;
+  cursor: pointer;
+}
+.modal-container .modal-body .modal-input {
+  width: 100%;
+  padding: 16px 16px 16px 6px;
+  border: #ccc 1px solid;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+#pay-btn {
+  width: 100%;
+  padding: 18px;
+  margin-top: 4px;
+  font-size: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right bottom,
+    #fe0963,
+    #ff2679,
+    #ff3688,
+    #ff4496,
+    #ff50a4,
+    #ff62b0,
+    #ff71bb,
+    #ff80c6,
+    #ff96d1,
+    #ffbbe3,
+    #ffd8ef,
+    #fde4f3
+  );
+  border: none;
+  cursor: pointer;
+}
+#pay-btn:hover {
+  color: #fff;
+  background-image: linear-gradient(
+    to left top,
+    #ff116a,
+    #ff2679,
+    #ff3688,
+    #ff4496,
+    #ff50a4,
+    #ff62b0,
+    #ff71bb,
+    #ff80c6,
+    #ff96d1,
+    #ffabdc,
+    #ffbfe5,
+    #ffd2ee
+  );
+}
+#pay-btn .ti-money {
+  font-weight: 7 00;
+}
+.modal-footer .modal-help {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  font-size: 18px;
+}
+.modal-footer a {
+  color: rgb(0, 170, 255);
+}
+
+/* Modal animation */
+
+@keyframes modalFadeIn {
+  from {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
