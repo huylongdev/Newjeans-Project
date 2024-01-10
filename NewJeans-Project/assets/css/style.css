@@ -185,8 +185,8 @@ html {
   position: relative;
   margin-top: 48px;
   padding-top: 50%;
-  background: url("/NewJeans-Project/assets/img/main-picture/main-picture.jpg")
-    center / cover no-repeat;
+  background: url("../img/main-picture/main-picture.jpg") center / cover
+    no-repeat;
 }
 #main-picture .text-content {
   position: absolute;

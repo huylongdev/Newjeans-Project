@@ -1,4 +1,4 @@
-@media (min-width: 1024px) and (max-width: 1370px) {
+@media (min-width: 64.0625em) and (max-width: 85.625em) {
   /* Navigation font-size */
   #nav li a {
     font-size: 14px;
@@ -41,7 +41,7 @@
   }
 }
 
-@media (min-width: 740px) and (max-width: 1024px) {
+@media (min-width: 46.25em) and (max-width: 64em) {
   /* font-size navigation */
   #nav li a {
     font-size: 14px;
@@ -148,7 +148,7 @@
   }
 }
 
-@media (max-width: 739px) {
+@media (max-width: 46.1875em) {
   /* Common */
   .s-mt-16 {
     margin-top: 8px !important;
@@ -180,7 +180,6 @@
   #nav > li:first-child {
     display: inline-block;
   }
-
 
   /*main-picture & Icon-rabbit */
   #main-picture .text-heading {
